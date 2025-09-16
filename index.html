@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Buddy Scientific Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Text Mode Button outside calculator -->
+  <button id="textModeBtn" class="mode-btn">Text Mode</button>
+
+  <div class="wrapper">
+
+    <!-- Calculator -->
+    <div class="container slide-up">
+      <h1>📚 Study Buddy Scientific Calculator</h1>
+      <input type="text" id="query" placeholder="Type or click buttons" readonly>
+
+      <div class="buttons">
+        <!-- Row 1 -->
+        <button>7</button><button>8</button><button>9</button><button>/</button><button>sin</button>
+        <!-- Row 2 -->
+        <button>4</button><button>5</button><button>6</button><button>*</button><button>cos</button>
+        <!-- Row 3 -->
+        <button>1</button><button>2</button><button>3</button><button>-</button><button>tan</button>
+        <!-- Row 4 -->
+        <button>0</button><button>.</button><button>+</button><button>=</button><button>log</button>
+        <!-- Row 5 -->
+        <button>C</button><button>(</button><button>)</button><button>^</button><button>√</button>
+        <!-- Row 6 -->
+        <button id="delBtn">⌫</button>
+      </div>
+
+      <!-- Extra Table Buttons -->
+      <div class="table-buttons">
+        <button id="multiplicationBtn">Multiplication Table</button>
+        <button id="scientificBtn">Scientific Formulas</button>
+      </div>
+
+      <button id="calculateBtn">🔍 Calculate</button>
+    </div>
+
+    <!-- Result Box -->
+    <div class="result-container slide-right">
+      <h2>Results</h2>
+      <div id="result"></div>
+    </div>
+  </div>
+
+  <!-- Error Modal -->
+  <div id="errorModal" class="error-modal">
+    <div class="error-content">
+      <p id="errorMessage">Oops! Something went wrong 😅</p>
+      <button id="closeError">OK</button>
+    </div>
+  </div>
+
+  <!-- Sounds -->
+  <audio id="clickSound" src="https://actions.google.com/sounds/v1/cartoon/pop.ogg"></audio>
+  <audio id="successSound" src="https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg"></audio>
+  <audio id="errorSound" src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg"></audio>
+  <audio id="funErrorSound" src="https://actions.google.com/sounds/v1/cartoon/boing.ogg"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
